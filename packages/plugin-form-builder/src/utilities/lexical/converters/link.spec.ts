@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest'
 
+import '../serializeLexical.js'
 import { replaceDoubleCurlys } from '../../replaceDoubleCurlys.js'
-import { LinkHTMLConverter } from './link.js'
+
+const { LinkHTMLConverter } = await import('./link.js')
 
 describe('LinkHTMLConverter', () => {
   it('handles internal links with numeric doc id when submissionData is provided', async () => {
